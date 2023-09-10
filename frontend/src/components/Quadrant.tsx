@@ -58,7 +58,7 @@ export default memo(({ quadrants, color }: QuadrantProps) => {
 
     return <canvas onClick={e => {
         const rect = ref.current?.getBoundingClientRect()
-        if (rect && e.ctrlKey) {
+        if (rect && (e.ctrlKey || e.metaKey)) {
             const x = Math.floor((e.clientX - rect.left) / (rect.right - rect.left) * 400)
             const y = Math.floor((e.clientY - rect.top) / (rect.bottom - rect.top) * 400)
             console.log(x, y)

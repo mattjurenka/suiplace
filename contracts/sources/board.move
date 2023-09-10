@@ -2,8 +2,8 @@ module sui_place::board {
     use std::vector;
 
     use sui::object::{Self, UID};
-    use sui::tx_context::{Self, TxContext, sender};
-    use sui::transfer::transfer;
+    use sui::tx_context::{TxContext, sender};
+    use sui::transfer::{transfer, share_object};
     use sui::dynamic_object_field::{Self};
 
     const EIncorrectAdminCap: u64 = 0;
@@ -51,14 +51,14 @@ module sui_place::board {
         
         let place_id = object::new(ctx);
         let place_addr = object::uid_to_address(&place_id);
-        let new_place = Place {
+        let place = Place {
             id: place_id,
             paused: false
         };
 
         let i = 0u8;
         while (i < 4) {
-            dynamic_object_field::add(&mut new_place.id, i, Quadrant {
+            dynamic_object_field::add(&mut place.id, i, Quadrant {
                 id: object::new(ctx),
                 quadrant_id: i,
                 board: make_board(200)
@@ -71,7 +71,7 @@ module sui_place::board {
             place: place_addr
         };
 
-        transfer(new_place, sender_addr);
+        share_object(place);
         transfer(pause_cap, sender_addr);
     }
 
