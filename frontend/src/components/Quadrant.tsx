@@ -68,6 +68,6 @@ export default memo(({ quadrants, color }: QuadrantProps) => {
         }
     }} ref={ref} height={800} width={800}/>
 }, (prev, next) => (
-    JSON.stringify(prev.quadrants.map(([_, digest]) => digest)) == 
-    JSON.stringify(next.quadrants.map(([_, digest]) => digest))
+    JSON.stringify([prev.quadrants.map(([_, digest]) => digest), prev.color]) == 
+    JSON.stringify([next.quadrants.map(([_, digest]) => digest), next.color])
 ))

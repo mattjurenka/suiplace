@@ -9,7 +9,7 @@ export interface PlaceBoardProps {
 }
 
 export default ({ color }: PlaceBoardProps) => {
-  const quadrant_responses = QUADRANT_ADDRESSES.map(address => useObjectSync(address, 1))
+  const quadrant_responses = QUADRANT_ADDRESSES.map(address => useObjectSync(address, 3))
   if (!quadrant_responses.every(x => x)) {
     return <div style={{
       width: "800px", height: "800px", border: "1px solid black",

@@ -16,7 +16,7 @@ function App() {
         <h1>Sui Place</h1>
         <p style={{marginTop: "4rem", marginBottom: "4rem"}}>
           Are you ready to join the Sui community in placing<br/> a tile on the board? Select a color
-          then ctrl+click to place.
+          then ctrl+click (win) or cmd+click (mac) to place.
         </p>
         <div style={{marginBottom: "4rem"}}>
           <CompactPicker color={color} onChangeComplete={(new_color) => set_color(new_color.hex)} />
