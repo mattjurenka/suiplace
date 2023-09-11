@@ -22,7 +22,7 @@ function App() {
           <CompactPicker color={color} onChangeComplete={(new_color) => set_color(new_color.hex)} />
         </div>
         <p style={{marginBottom: "4rem"}}>
-          Sui move is currently only available on devnet, make sure your wallet network
+          Sui Place is currently only available on devnet, make sure your wallet network
           is properly set.
         </p>
         <a href="https://jurenka.software/"><b>Made with ❤️ by https://jurenka.software/</b></a>

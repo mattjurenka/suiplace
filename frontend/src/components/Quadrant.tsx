@@ -11,6 +11,7 @@ export default memo(({ quadrants, color }: QuadrantProps) => {
     const ref = useRef<HTMLCanvasElement>(null)
     const { wallet } = ethos.useWallet();
 
+
     useEffect(() => {
         if (ref.current) {
             const ctx = ref.current.getContext("2d")
@@ -61,7 +62,15 @@ export default memo(({ quadrants, color }: QuadrantProps) => {
         if (rect && (e.ctrlKey || e.metaKey)) {
             const x = Math.floor((e.clientX - rect.left) / (rect.right - rect.left) * 400)
             const y = Math.floor((e.clientY - rect.top) / (rect.bottom - rect.top) * 400)
-            console.log(x, y)
+            //wallet?.requestPreapproval({
+            //    objectId: PLACE,
+            //    totalGasLimit: 1_000_000_000,
+            //    chain: Chain.SUI_DEVNET,
+            //    target: `${PACKAGE_ID}::board::set_pixel_at`,
+            //    description: "",
+            //    perTransactionGasLimit: 1_000_000_000,
+            //    maxTransactionCount: 25
+            //})
             wallet?.signAndExecuteTransactionBlock({
                 transactionBlock: get_set_pixel_trx(x, y, parseInt(color.replace("#", ""), 16))
             })
