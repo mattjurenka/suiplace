@@ -5,12 +5,12 @@ Code repo of the ["YouTube Sui Fullstack Tutorial"](https://www.youtube.com/play
 This tutorial will show you how to start building smart contracts on Sui. It is aimed at junior developers and those who may not be blockchain experts.
 It does not intend to cover all the intricacies of Sui Move but rather aims to show how you write and bring all the components of a Dapp together, forming a functioning live app.
 
-To learn the basics about Sui Move, I recommend the following tutorials:  
+To learn the basics of Sui Move, I recommend the following tutorials:  
 [sui-foundation - sui-move-intro-course](https://github.com/sui-foundation/sui-move-intro-course/tree/main) - written  
 [sui-foundation - encode-sui-educate](https://github.com/sui-foundation/encode-sui-educate) - YouTube  
 
 
-### Topics covered:  
+### Topics covered
 [Introduction](https://youtu.be/FBJjgZiia6g?si=m_80fwAzT2VPzAP8)  
 [Install Sui on MacOS](https://youtu.be/ONFX9tGuMt8?si=7dN7fW8Qp221t6LK)  
 [Install Sui on Windows](https://youtu.be/gA1HYUnOvcQ?si=TcKgMzq5s_lribQA)  
@@ -23,3 +23,8 @@ To learn the basics about Sui Move, I recommend the following tutorials:
 [Writing React Frontend](https://youtu.be/zbOdWy3u5iE?si=0qw56xn439YOOZJu)  
 [Indexers and Off-Chain Architecture](https://youtu.be/ucwkuEF21Ck?si=ULKuEyLI65ojRjgq)  
 [Shinami Gas Station](https://youtu.be/L4xbo0Q6XMs?si=7lVqo1fu8Xj3u1RY)  
+
+
+### More resources
+[Curated Public Sui Move Code Repos](https://ufahamu.notion.site/Public-Sui-Move-Code-Repos-8cd598f0df994a3482bd1dc797f44d3e?pvs=4)  
+[sui.io/developers](https://sui.io/developers)
